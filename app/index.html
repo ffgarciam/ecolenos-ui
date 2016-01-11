@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Ecoleños</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -15,20 +15,80 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p>You now have</p>
-        <ul>
-          <li>HTML5 Boilerplate</li>
-          <li>Bootstrap</li>
-          <li>Font Awesome <i class="fa fa-flag"></i></li>
-        </ul>
-        <p>installed.</p>
-        <h3>Enjoy coding! - Yeoman</h3>
+  <body class="ecolenos">
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              <img alt="Brand" src="images/logo.jpg">
+            </a>
+          </div>
+
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="#">Products</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="carousel">
+          <div class="text-wrapper">
+            <p class="text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+            </p>
+          </div>
+        </section>
+
+        <section class="products">
+          <h1 class="title">Products</h1>
+          <ul class="row">
+            <li class="col-md-3">
+              <a href="#"><img src="images/product1.jpg" alt="product 1"></a>
+            </li>
+            <li class="col-md-3">
+              <a href="#"><img src="images/product2.jpg" alt="product 2"></a>
+            </li>
+            <li class="col-md-3">
+              <a href="#"><img src="images/product1.jpg" alt="product 3"></a>
+            </li>
+            <li class="col-md-3">
+              <a href="#"><img src="images/product2.jpg" alt="product4"></a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="about-us">
+          <h1 class="title">About</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          </p>
+        </section>
+
+        <section class="contact">
+          <h1 class="title">Contact</h1>
+        </section>
       </div>
-    </div>
+    </main>
+
+    <footer class="container eco-footer">
+
+    </footer>
 
 
     <!--[if lt IE 7]>

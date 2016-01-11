@@ -100,7 +100,7 @@
 
   @media (min-width: @grid-float-breakpoint) {
     margin-right: 0;
-    margin-left:  0;
+    margin-left:  100px;
   }
 }
 
@@ -207,10 +207,16 @@
 .navbar-nav {
   margin: (@navbar-padding-vertical / 2) -@navbar-padding-horizontal;
 
+  margin-right: 100px;
+
   > li > a {
     padding-top:    10px;
     padding-bottom: 10px;
-    line-height: @line-height-computed;
+    line-height: 102px;
+    font-size: 22px;
+    color: @eco-font-color;
+    font-weight: 600;
+    text-transform: capitalize;
   }
 
   @media (max-width: @grid-float-breakpoint-max) {
@@ -239,11 +245,12 @@
 
   // Uncollapse the nav
   @media (min-width: @grid-float-breakpoint) {
-    float: left;
+    float: right;
     margin: 0;
 
     > li {
       float: left;
+      margin-right: 100px;
       > a {
         padding-top:    @navbar-padding-vertical;
         padding-bottom: @navbar-padding-vertical;
@@ -373,7 +380,10 @@
 
 // Default navbar
 .navbar-default {
-  background-color: @navbar-default-bg;
+  background-color: rgba(255, 255, 255, 0.75);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff, endColorstr=#99ffffff)";
+
   border-color: @navbar-default-border;
 
   .navbar-brand {
@@ -391,7 +401,7 @@
 
   .navbar-nav {
     > li > a {
-      color: @navbar-default-link-color;
+      color: @eco-font-color;
 
       &:hover,
       &:focus {
@@ -404,7 +414,8 @@
       &:hover,
       &:focus {
         color: @navbar-default-link-active-color;
-        background-color: @navbar-default-link-active-bg;
+        background-color: rgba(248, 248, 248, 0.5);
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99f8f8f8, endColorstr=#99f8f8f8)";
       }
     }
     > .disabled > a {
