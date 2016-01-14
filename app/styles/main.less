@@ -85,11 +85,60 @@
 
   .eco-footer {
     background-color: #522637;
-    background-image: url("../images/footer-logo.jpg");
-    background-repeat: no-repeat;
-    background-position: 100px 0;
-    height: 135px;
 
+    .footer-left {
+      float: left;
+      margin-right: 0px;
+      margin-left: 100px;
+    }
 
+    .footer-right {
+      margin-right: 0px;
+      margin-left: 100px;
+
+      &.collapse {
+        display: block !important;
+        height: auto !important;
+        padding-bottom: 0px;
+        overflow: visible !important;
+        width: auto;
+        max-height: 135px;
+      }
+
+      > ul {
+        .list-unstyled();
+        float: left;
+        margin-left: 50px;
+        margin-bottom: 0;
+
+        > li {
+          float: left;
+          display: block;
+          margin-right: 40px;
+
+          > a {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            display: block;
+            line-height: 135px;
+          }
+        }
+      }
+
+      .address {
+        margin-top: 35px;
+        max-width: 190px;
+
+        > span {
+          line-height: inherit;
+          padding-left: 40px;
+          border-left: 1px solid #fff;
+          font-size: 14px;
+          color: #fff;
+          display: block;
+        }
+      }
+    }
   }
 }
