@@ -17,15 +17,22 @@
   </head>
   <body class="ecolenos">
     <header>
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <nav class="navbar navbar-default navbar-fixed-top" id="navbar-container">
         <div class="container">
           <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
             <a class="navbar-brand" href="#">
               <img alt="Brand" src="images/logo.jpg">
             </a>
           </div>
 
-          <div class="collapse navbar-collapse">
+          <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
               <li class="active">
                 <a href="#">Products</a>
@@ -55,16 +62,16 @@
         <section class="products">
           <h1 class="title">Products</h1>
           <ul class="row">
-            <li class="col-md-3">
+            <li class="col-md-3 col-xs-6">
               <a href="#"><img src="images/product1.jpg" alt="product 1"></a>
             </li>
-            <li class="col-md-3">
+            <li class="col-md-3 col-xs-6">
               <a href="#"><img src="images/product2.jpg" alt="product 2"></a>
             </li>
-            <li class="col-md-3">
+            <li class="col-md-3 col-xs-6">
               <a href="#"><img src="images/product1.jpg" alt="product 3"></a>
             </li>
-            <li class="col-md-3">
+            <li class="col-md-3 col-xs-6">
               <a href="#"><img src="images/product2.jpg" alt="product4"></a>
             </li>
           </ul>
@@ -88,32 +95,43 @@
 
     <footer class="eco-footer">
       <div class="container">
-        <div class="footer-left">
-          <div class="footer-brand">
-            <a href="#">
-              <img src="images/footer-logo.jpg" alt="ecolenos footer logo">
-            </a>
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="footer-brand">
+              <a href="#">
+                <img src="images/footer-logo.jpg" alt="ecolenos footer logo">
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="footer-right collapse">
-          <ul>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li class="address">
-              <span>Contact Address
-                1234 Anystreet
-                Anytown, State 12345
-              </span>
-            </li>
-          </ul>
+          <div class="col-sm-9">
+            <div class="row">
+              <div class="col-xs-7">
+                <ul>
+                  <li><a href="#">Product</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+
+              <div class="col-xs-5">
+                <div class="address">
+                  <span>Contact Address
+                    1234 Anystreet
+                    Anytown, State 12345
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
 
 
     <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+      </p>
     <![endif]-->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

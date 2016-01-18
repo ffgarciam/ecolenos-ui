@@ -65,6 +65,7 @@
     width: auto;
     border-top: 0;
     box-shadow: none;
+    margin: 0;
 
     &.collapse {
       display: block !important;
@@ -104,6 +105,23 @@
   }
 }
 
+.container {
+  .navbar-collapse {
+    @media (max-width: @grid-float-breakpoint) {
+      margin: 0;
+      border-right: 1px solid rgb(231, 231, 231);
+      border-left: 1px solid rgb(231, 231, 231);
+    }
+  }
+
+  .navbar-header {
+    @media (max-width: @grid-float-breakpoint) {
+      margin: 0;
+      border-right: 1px solid rgb(231, 231, 231);
+      border-left: 1px solid rgb(231, 231, 231);
+    }
+  }
+}
 
 //
 // Navbar alignment options
@@ -174,10 +192,10 @@
 .navbar-toggle {
   position: relative;
   float: right;
-  margin-right: @navbar-padding-horizontal;
+  margin-right: 35px;
   padding: 9px 10px;
   .navbar-vertical-align(34px);
-  background-color: transparent;
+  background-color: #fff;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   border-radius: @border-radius-base;
@@ -247,10 +265,11 @@
   @media (min-width: @grid-float-breakpoint) {
     float: right;
     margin: 0;
+    width: 60%;
 
     > li {
-      float: left;
-      margin-right: 100px;
+      float: right;
+      margin-right: 11%;
       > a {
         padding-top:    @navbar-padding-vertical;
         padding-bottom: @navbar-padding-vertical;
@@ -416,6 +435,8 @@
         color: @navbar-default-link-active-color;
         background-color: rgba(248, 248, 248, 0.5);
         -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99f8f8f8, endColorstr=#99f8f8f8)";
+
+        .transition(.4s ease background-color);
       }
     }
     > .disabled > a {
@@ -432,7 +453,7 @@
     border-color: @navbar-default-toggle-border-color;
     &:hover,
     &:focus {
-      background-color: @navbar-default-toggle-hover-bg;
+      background-color: #f8f8f8;
     }
     .icon-bar {
       background-color: @navbar-default-toggle-icon-bar-bg;
@@ -446,6 +467,20 @@
 
   // Dropdown menu items
   .navbar-nav {
+
+    @media (max-width: @screen-md) {
+      margin-right: 0;
+      float: right;
+
+      > li {
+        display: inline-block;
+
+        > a {
+          line-height: 50px;
+        }
+      }
+    }
+
     // Remove background color from open dropdown
     > .open > a {
       &,

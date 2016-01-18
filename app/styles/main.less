@@ -25,6 +25,10 @@
       color: @eco-font-color;
       width: 70%;
       margin: 0 auto;
+
+      @media (max-width: @grid-float-breakpoint) {
+        font-size: 36px;
+      }
     }
   }
 
@@ -41,6 +45,24 @@
       .list-unstyled;
       .product-constraints;
 
+    }
+
+    @media (max-width: @grid-float-breakpoint) {
+      li {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: @screen-xs-max) {
+      padding: 30px 0;
+      li {
+        padding: 0;
+
+        img {
+          padding: 0;
+        }
+      }
     }
   }
 
@@ -86,59 +108,92 @@
   .eco-footer {
     background-color: #522637;
 
-    .footer-left {
-      float: left;
-      margin-right: 0px;
-      margin-left: 100px;
+    .row {
+      margin: 0;
     }
 
-    .footer-right {
-      margin-right: 0px;
-      margin-left: 100px;
+    .footer-brand {
+      text-align: center;
 
-      &.collapse {
-        display: block !important;
-        height: auto !important;
-        padding-bottom: 0px;
-        overflow: visible !important;
-        width: auto;
-        max-height: 135px;
+      img {
+        max-width: 100%;
+        min-height: 135px;
+      }
+    }
+
+    ul {
+      .list-unstyled();
+      .pull-right();
+      margin-left: 50px;
+      margin-bottom: 0;
+
+      @media (max-width: @grid-float-breakpoint) {
+        margin-left: 0;
       }
 
-      > ul {
-        .list-unstyled();
+      @media (max-width: @screen-sm-min) {
+        //.pull-left();
+      }
+
+      > li {
         float: left;
-        margin-left: 50px;
-        margin-bottom: 0;
+        display: block;
+        margin-right: 40px;
 
-        > li {
-          float: left;
+        @media (max-width: @grid-float-breakpoint) {
+          margin-right: 10px;
+        }
+
+        > a {
+          color: #fff;
+          font-size: 18px;
+          font-weight: 600;
           display: block;
-          margin-right: 40px;
+          line-height: 135px;
 
-          > a {
-            color: #fff;
-            font-size: 18px;
-            font-weight: 600;
-            display: block;
-            line-height: 135px;
+          @media (max-width: @screen-xs-min) {
+            font-size: 14px;
           }
         }
       }
+    }
 
-      .address {
-        margin-top: 35px;
-        max-width: 190px;
+    .address {
+      margin-top: 35px;
+      max-width: 190px;
 
-        > span {
-          line-height: inherit;
-          padding-left: 40px;
-          border-left: 1px solid #fff;
-          font-size: 14px;
-          color: #fff;
-          display: block;
+      > span {
+        line-height: inherit;
+        padding-left: 40px;
+        border-left: 1px solid #fff;
+        font-size: 14px;
+        color: #fff;
+        display: block;
+
+        @media (max-width: @grid-float-breakpoint) {
+          padding-left: 15px;
         }
       }
     }
+
+  }
+
+  .navbar-default {
+    .transition(.2s ease background-color);
+
+    &.scroll-down {
+      background-color: rgba(255, 255, 255, 1);
+
+      ul.navbar-nav {
+        > .active > a {
+          background-color: rgba(248, 248, 248, 1);
+
+          &:hover, &:focus {
+            background-color: rgba(248, 248, 248, 1);
+          }
+        }
+      }
+    }
+
   }
 }
